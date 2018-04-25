@@ -1,0 +1,56 @@
+<view class="page" >
+  <view class="row">
+    <view class="cell">
+        <picker bindchange="itemtypeChange" value="{{itemtypeCategory}}" range="{{itemtypeCategorys}}">
+            <view class="icon">
+              <image style="width: 70rpx; height: 70rpx;" src="/icons/closet.png"></image>
+            </view>
+            <view class="select">{{itemtypeCategorys[itemtypeCategory]}}</view>
+        </picker>
+    </view>
+
+    <view class="cell">
+        <picker bindchange="seasonChange" value="{{seasonCategory}}" range="{{seasonCategorys}}">
+            <view class="icon">
+            <image style="width: 70rpx; height: 70rpx;" src="/icons/weather.png"></image>
+            </view>
+            <view class="select">{{seasonCategorys[seasonCategory]}}</view>
+        </picker>
+    </view>
+    <view class="cell">
+        <picker bindchange="colorChange" value="{{colorCategory}}" range="{{colorCategorys}}">
+            <view class="icon">
+            <image style="width: 70rpx; height: 70rpx;" src="/icons/color.png"></image>
+            </view>
+            <view class="select">{{colorCategorys[colorCategory]}}</view>
+        </picker>
+    </view>
+    <view class="cell">
+        <picker bindchange="occasionChange" value="{{occasionCategory}}" range="{{occasionCategorys}}">
+            <view class="icon">
+            <image style="width: 70rpx; height: 70rpx; margin: 15rpx 15rpx;" src="/icons/wine.png"></image>
+            </view>
+            <view class="select">{{occasionCategorys[occasionCategory]}}</view>
+        </picker>
+    </view>
+  </view>
+  <swiper wx:if="{{current.length>0}}" class="swiper" circular="true" current="{{swiperid}}" bindchange="swiperchange" >
+    <block wx:for="{{current}}" wx:key="{{_id}}">
+      <swiper-item bindtap="showoptions" id="{{item._id}}">
+      <view class="swiperItem">
+        <image class="swiperImg" mode="aspectFill" src="https://chinabackend.bestlarp.com/pic/{{unionid}}/{{item.image}}" />
+        <view wx:if="{{item.savetoday>0}}" class="covertop">
+          今日装扮
+        </view>
+        <view class="cover">
+          <view>{{itemtypeCategorys[item.itemtype]}}</view>
+          <view>{{seasonCategorys[item.season]}}</view>
+          <view>{{colorCategorys[item.color]}}</view>
+          <view>{{occasionCategorys[item.occasion]}}</view>
+        </view>
+      </view>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view wx:if="{{current.length==0}}" >您还没有此类服装，赶快去买吧</view>
+</view>

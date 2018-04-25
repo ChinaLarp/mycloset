@@ -1,0 +1,118 @@
+/* pages/select/select.wxss */
+.page{
+  background-color:#eee;
+  height:100vh;
+  margin:0 0;
+  padding:0 0; 
+}
+.upperBlock{
+  display: block;
+  height: 40vh;
+  margin:0 auto;
+  padding:10px;
+  border-bottom:3rpx solid #fff;
+}
+.lowerBlock{
+  display: block;
+  height: 60vh;
+  margin:0 auto;
+  padding:10px;
+}
+.imageBlock{
+  display: block;
+  height: 35vh;
+  margin:0 auto;
+  width:50%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.imagePreview{
+  display:block;
+  border-radius: 8px;
+  width:100%;
+  height:100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.btn{
+  border-radius: 10px;
+  position:relative;
+  background-color:transparent;
+  color:#222;
+  font-size:40rpx;
+  line-height:80rpx;
+  width:50%;
+  margin: 0,auto;
+  height:80rpx;
+  border:5rpx solid #222;
+  text-shadow:3px 3px 8px #fff;
+  box-shadow: 3px 3px 8px #fff;
+}
+.cell{
+  position:relative;
+  color:#222;
+  border:1rpx solid #222;
+  border-radius: 10px;
+  height:90rpx;
+  width:70%;
+  margin: 15rpx auto;
+  text-shadow:1px 1px 8px #ccc;
+  box-sizing: border-box;
+}
+.cell::before{
+  content:" ";
+  display: block;
+  position:absolute;
+  background-color:#eee;
+  width:18rpx;
+  height:18rpx;
+  left:85%;
+  top: 40%;
+  border-right:2px solid #999;
+  border-bottom:2px solid #999;
+  transform: rotateZ(45deg)
+}
+.icon{
+  display:inline-block;
+  text-align:center;
+  height:100rpx;
+  width:30%;
+  margin:0 20rpx;
+  box-sizing: border-box;
+  padding: 10rpx 0;
+}
+.select{
+  display:inline-block;
+  padding: 0 0;
+  vertical-align: top;
+  text-align:center;
+  line-height:100rpx;
+}
+.bottomBlock{
+  width:100%;
+  text-align: center;
+}
+.subbtnleft{
+  border-radius: 10px;
+  display:inline-block;
+  width:30vw;
+  margin:0 30rpx;
+  background-color:transparent;
+  color:maroon;
+  font-size:40rpx;
+  height:80rpx;
+  line-height:80rpx;
+  border:5rpx solid maroon;
+
+}
+.subbtnright{
+  border-radius: 10px;
+  display:inline-block;
+  width:30vw;
+  margin:0 30rpx;
+  background-color:transparent;
+  color:goldenrod;
+  font-size:40rpx;
+  height:80rpx;
+  line-height:80rpx;
+  border:5rpx solid goldenrod;
+}

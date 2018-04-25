@@ -1,0 +1,88 @@
+/* pages/select/select.wxss */
+.page{
+  background-color:#eee;
+  height:100vh;
+  margin:0 0;
+  padding:0 0; 
+}
+.row{
+  display: flex;
+  flex-direction: row;
+}
+.cell{
+  position:relative;
+  background-color:#666;
+  color:#eee;
+  line-height:1.41176471;
+  font-size:12px;
+  width:25%;
+  height:100rpx;
+  padding-top:3px;
+  border-right:1rpx solid #c8c8cd;
+  text-shadow:1px 1px 8px #ccc;
+}
+.cell::before{
+  content:" ";
+  display: block;
+  position:absolute;
+  background-color:#666;
+  width:8rpx;
+  height:8rpx;
+  left:85%;
+  top: 65%;
+  border-right:2px solid #999;
+  border-bottom:2px solid #999;
+  transform: rotateZ(45deg)
+}
+.icon{
+  display:block;
+  text-align:center;
+  height:60rpx;
+  margin:0 0;
+  padding:0 0; 
+  line-height:60rpx;
+}
+.select{
+  display:block;
+  text-align:center;
+  height:40rpx;
+  line-height:40rpx;
+}
+.swiper{
+  height: calc(100vh - 181rpx);
+}
+.swiperItem{
+  display:relative;
+  width:85vw;
+  height:80vh;
+  margin: 50rpx auto;
+}
+.swiperImg{
+  display:block;
+  border-radius: 8px;
+  width:100%;
+  height:100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.cover{
+  display: block;
+  position: absolute;
+  bottom:10%;
+  right:10%;
+  color:#fff;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 8px;
+  padding:3px 7px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.covertop{
+  display: block;
+  position: absolute;
+  top:10%;
+  right:10%;
+  color: skyblue;
+  border: 2px solid skyblue;
+  border-radius: 5px;
+  padding:3px 7px;
+  transform: rotateZ(35deg);
+}

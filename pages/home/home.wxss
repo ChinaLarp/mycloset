@@ -1,0 +1,37 @@
+/**index.wxss**/
+.background{
+  width:100vw;
+  height:100vh;
+  margin:0 0;
+  padding:0 0;
+  border: 1ps solid #000;
+}
+.backimage{
+  display: block;
+  overflow: auto;
+  height: 100%;
+  width:100%;
+  margin:0 0;
+  padding:0 0;
+  border: 1ps solid #000;
+}
+.buttongroup{
+  display: block;
+  position:absolute;
+  right:10%;
+  bottom:10%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+.mainbtn {
+  width:350rpx;
+  height:100rpx;
+  margin-top:10px;
+  font-family: "KaiTi"
+}

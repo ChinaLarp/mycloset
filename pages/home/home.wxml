@@ -1,0 +1,13 @@
+
+  <view class="background">
+    <image class="backimage" src="/icons/icloset.png" />
+    <view class="buttongroup">
+      <button class="mainbtn" bindtap='navigate' id='mycloset'>我的衣橱</button>
+      <button class="mainbtn" bindtap='navigate' id='today'>今日装扮</button>
+      <button class="mainbtn" bindtap='navigate' id='addnew'>买买买啦</button>
+      <!--<button class="mainbtn" bindtap='navigate' id='myfav'>装扮库</button>-->
+      <button class="mainbtn" bindtap='navigate' id='blacklist'>我的冷宫</button>
+    
+    </view>
+
+  </view>

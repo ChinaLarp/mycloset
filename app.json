@@ -1,0 +1,41 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/fashion/fashion",
+    "pages/match/match",
+    "pages/mycloset/mycloset",
+    "pages/today/today",
+    "pages/addnew/addnew",
+    "pages/blacklist/blacklist"
+  ],
+  "tabBar": {
+    "color": "#000",
+    "selectedColor": "#444",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "我的衣橱",
+        "iconPath": "icons/closet.png",
+        "selectedIconPath": "icons/closet.png"
+      },
+      {
+        "pagePath": "pages/fashion/fashion",
+        "text": "时尚前沿",
+        "iconPath": "icons/fashion.png",
+        "selectedIconPath": "icons/fashion.png"
+      },
+      {
+        "pagePath": "pages/match/match",
+        "text": "推荐搭配",
+        "iconPath": "icons/match.png",
+        "selectedIconPath": "icons/match.png"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "我的衣橱",
+    "navigationBarTextStyle": "black"
+  }
+}

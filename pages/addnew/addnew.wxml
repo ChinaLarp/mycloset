@@ -1,0 +1,54 @@
+<view class="page" >
+  <view class="upperBlock">
+    <view class="imageBlock">
+      <image wx:if="{{image}}" mode="aspectFill" class="imagePreview" src="https://chinabackend.bestlarp.com/pic/{{unionid}}/{{image}}" />
+      <image wx:if="{{!image}}"  mode="aspectFit"  class="imagePreview" src="/icons/cloth.png" />
+    </view>
+  </view>
+  
+  <view class="lowerBlock">
+    <button class="btn" bindtap="addphoto">添加图片</button>
+
+    <view class="cell">
+    <picker bindchange="itemtypeChange" value="{{itemtypeCategory}}" range="{{itemtypeCategorys}}">
+        <view class="icon">
+          <image style="width: 70rpx; height: 70rpx;" src="/icons/closet.png"></image>
+        </view>
+        <view class="select">{{itemtypeCategorys[itemtypeCategory]}}</view>
+    </picker>
+    </view>
+    
+    <view class="cell">
+        <picker bindchange="seasonChange" value="{{seasonCategory}}" range="{{seasonCategorys}}">
+            <view class="icon">
+            <image style="width: 70rpx; height: 70rpx;" src="/icons/weather.png"></image>
+            </view>
+            <view class="select">{{seasonCategorys[seasonCategory]}}</view>
+        </picker>
+    </view>
+    
+    <view class="cell">
+    <picker bindchange="colorChange" value="{{colorCategory}}" range="{{colorCategorys}}">
+            <view class="icon">
+            <image style="width: 70rpx; height: 70rpx;" src="/icons/color.png"></image>
+            </view>
+            <view class="select">{{colorCategorys[colorCategory]}}</view>
+        </picker>
+    </view>
+    
+    <view class="cell">
+    <picker bindchange="occasionChange" value="{{occasionCategory}}" range="{{occasionCategorys}}">
+            <view class="icon">
+            <image style="width: 70rpx; height: 70rpx;" src="/icons/wine.png"></image>
+            </view>
+            <view class="select">{{occasionCategorys[occasionCategory]}}</view>
+      </picker>
+    </view>
+
+    <view class="bottomBlock">
+      <button class="subbtnleft" bindtap="relauch">放弃</button>
+
+      <button class="subbtnright" bindtap="saveitem">保存</button>
+    </view>
+  </view>
+</view>
