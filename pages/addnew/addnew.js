@@ -90,6 +90,9 @@ Page({
   },
   saveitem:function(){
     const that = this
+    wx.showLoading({
+      title: '保存中',
+    })
     wx.request({
       method:'POST',
       url: 'https://chinabackend.bestlarp.com/api/closet',
@@ -104,6 +107,7 @@ Page({
       },
       success:function(res){
         console.log("done")
+        wx.hideLoading()
         wx.reLaunch({
           url: '../home/home',
         })

@@ -169,7 +169,7 @@ Page({
             that.setData({
               inventory: that.data.inventory.filter(item => item._id != id),
               current: that.data.current.filter(item => item._id != id),
-              swiperid: that.data.swiperid - 1
+              swiperid: 0
             })
             wx.request({
               url: 'https://chinabackend.bestlarp.com/api/closet/' + id,
