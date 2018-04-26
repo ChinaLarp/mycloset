@@ -52,12 +52,14 @@ Page({
     const filename = Date.now()
     const that=this
     wx.chooseImage({
+      count:1,
       success: function (res) {
         wx.showLoading({
           title: '上传中',
         })
         var tempFilePaths = res.tempFilePaths
-        wx.uploadFile({
+        console.log(res)
+        const uploadTask = wx.uploadFile({
           url: 'https://chinabackend.bestlarp.com/uploadimage', //仅为示例，非真实的接口地址
           filePath: tempFilePaths[0],
           name: 'file',
@@ -74,6 +76,15 @@ Page({
             //do something
           }
         })
+        uploadTask.onProgressUpdate((res) => {
+          console.log('上传进度', res.progress)
+          console.log('已经上传的数据长度', res.totalBytesSent)
+          console.log('预期需要上传的数据总长度', res.totalBytesExpectedToSend)
+        })
+      },
+      fail: function (res) {
+        //var tempFilePaths = res.tempFilePaths
+        console.log(res)
       }
     })
   },
